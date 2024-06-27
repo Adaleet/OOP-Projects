@@ -23,5 +23,5 @@ The Library Management System is an object-oriented project developed in Java to
 - **Design Patterns:** Singleton, Factory, Observer, etc.
 
 ## Project Structure 
-- Currently in process.
+- Currently in progress.
 
