@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Management;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author adalatadiljan
+ */
+public class Management {
+    private List<Book> books;
+    private List<Member> members;
+
+    public Management(){
+        this.books = new ArrayList<>();
+        this.members = new ArrayList<>(); 
+    }
+    public void addBook(Book book){
+        books.add(book);
+    }
+    public void addMember(Member member){
+        members.add(member);
+    }
+    public Book findBookByIsbn(String isbn){
+        if(Book book : books){
+        if(book.getIsbn().equals(isbn)){
+            return book;
+        }
+    }
+        return null;
+    }
+}
