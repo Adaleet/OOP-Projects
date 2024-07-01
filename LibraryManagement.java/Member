@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Management;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author adalatadiljan
+ */
+public class Member {
+    private String name; 
+    private String memberId; 
+    private List<Book> borrowedBooks;
+    
+    public Member(String name, String memberId){
+        this.name = name;
+        this.memberId = memberId; 
+        this.borrowedBooks = new ArrayList<>();
+    }
+    public String getName(){
+        return name;
+    }
+    public String getCustomerId(){
+        return customerId;
+    }
+    public List<Book> getBorrowedBooks(){
+        return borrowedBooks;
+    }
+    public void borrowBook(Book book){
+        if(!book.isBorrowed()){
+            book.borrowBook(); 
+            borrowedBooks.add(book); 
+        } else {
+            System.out.println("Book is alreday borrowed");
+        }
+    }
+    public void returnBooks(Book book){
+        if(borrowedBooks.remove(book)){
+            book.returnBook(); 
+        } else {
+            System.out.println(" This book is not borrowed by the member");
+        }
+    }
+    
+}
